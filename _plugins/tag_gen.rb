@@ -8,8 +8,8 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
       self.data['tag'] = tag
-      tag_title_prefix = site.config['tag_title_prefix'] || 'Episodes Tagged &ldquo;'
-      tag_title_suffix = site.config['tag_title_suffix'] || '&rdquo;'
+      tag_title_prefix = site.config['tag_title_prefix'] || 'Episodes Tagged "'
+      tag_title_suffix = site.config['tag_title_suffix'] || '"'
       self.data['title'] = "#{tag_title_prefix}#{tag}#{tag_title_suffix}"
     end
   end
@@ -18,7 +18,13 @@ module Jekyll
     def generate(site)
       if site.layouts.key? 'tag_index'
         dir = site.config['tag_dir'] || 'tag'
-        site.tags.keys.each do |tag|
+        tags = []
+        site.collections["episodes"].docs.each do |episode|
+          if (episode.data["tags"])
+            tags.concat(episode.data["tags"])
+          end
+        end
+        tags.each do |tag|
           write_tag_index(site, File.join(dir, tag), tag)
         end
       end
