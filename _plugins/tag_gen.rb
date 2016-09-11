@@ -10,7 +10,7 @@ module Jekyll
       self.data['tag'] = tag
       tag_title_prefix = site.config['tag_title_prefix'] || 'Episodes Tagged "'
       tag_title_suffix = site.config['tag_title_suffix'] || '"'
-      self.data['title'] = "#{tag_title_prefix}#{tag}#{tag_title_suffix}"
+      self.data['title'] = "#{tag_title_prefix}#{tag.capitalize}#{tag_title_suffix}"
     end
   end
   class TagGenerator < Generator
@@ -30,6 +30,7 @@ module Jekyll
       end
     end
     def write_tag_index(site, dir, tag)
+      puts 'writing index to dir ' + dir
       index = TagIndex.new(site, site.source, dir, tag)
       index.render(site.layouts, site.site_payload)
       index.write(site.dest)
