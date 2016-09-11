@@ -22,5 +22,4 @@ gem "minima"
 group :jekyll_plugins do
   gem 'octopress-hooks', git: 'https://github.com/octopress/hooks.git'
   gem 'octopress-paginate'
-  gem 'jekyll-lunr-js-search'
 end
