@@ -1,0 +1,756 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+  
+  <title>Joybubbles Archive</title>
+  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search resu...">
+  <link rel="canonical" href="/search.html">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--[if lte IE 8]><script src="/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="/css/main.css">
+  <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
+</head>
+
+	<body>
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+  <h1><a href="/">Joybubbles Archive</a></h1>
+  <nav id="nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <!--li>
+        <a href="#" class="icon fa-angle-down">Layouts</a>
+        <ul>
+          <li><a href="generic.html">Generic</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="elements.html">Elements</a></li>
+          <li>
+            <a href="#">Submenu</a>
+            <ul>
+              <li><a href="#">Option One</a></li>
+              <li><a href="#">Option Two</a></li>
+              <li><a href="#">Option Three</a></li>
+              <li><a href="#">Option Four</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li-->
+      <li><a href="/about">About</a></li>
+      <li><a href="/episodes">Full Episodes</a></li>
+    </ul>
+  </nav>
+</header>
+
+			<!-- Main -->
+				<section id="main" class="container">
+					<form action="/search.html" method="get" style="margin-left:auto;margin-right:auto;width:50%;">
+  <input type="text" id="search-box" name="query" style="margin-bottom:10px;" placeholder="Search titles, descriptions and tags">
+  <input type="submit" value="search" style="display:block;margin:0 auto;">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    
+      "episodes-20040508-html": {
+        "name": "Untitled",
+        "date": "05/08/04",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20040508.html"
+      }
+      ,
+    
+      "episodes-20040509-html": {
+        "name": "Untitled",
+        "date": "05/09/04",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20040509.html"
+      }
+      ,
+    
+      "episodes-20040517-html": {
+        "name": "Untitled",
+        "date": "05/17/04",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20040517.html"
+      }
+      ,
+    
+      "episodes-20051204-html": {
+        "name": "Untitled",
+        "date": "12/04/05",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20051204.html"
+      }
+      ,
+    
+      "episodes-20051228-html": {
+        "name": "Untitled",
+        "date": "12/28/05",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20051228.html"
+      }
+      ,
+    
+      "episodes-20060101-html": {
+        "name": "Untitled",
+        "date": "01/01/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060101.html"
+      }
+      ,
+    
+      "episodes-20060108-html": {
+        "name": "Untitled",
+        "date": "01/08/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060108.html"
+      }
+      ,
+    
+      "episodes-20060206-html": {
+        "name": "Untitled",
+        "date": "02/06/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060206.html"
+      }
+      ,
+    
+      "episodes-20060326-html": {
+        "name": "Untitled",
+        "date": "03/26/06",
+        "tags": "fragment",
+        "content": "",
+        "url": "/episodes/20060326.html"
+      }
+      ,
+    
+      "episodes-20060404-html": {
+        "name": "Untitled",
+        "date": "04/04/06",
+        "tags": "full",
+        "content": "",
+        "url": "/episodes/20060404.html"
+      }
+      ,
+    
+      "episodes-20060408-html": {
+        "name": "Untitled",
+        "date": "04/08/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060408.html"
+      }
+      ,
+    
+      "episodes-20060416-html": {
+        "name": "Untitled",
+        "date": "04/16/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060416.html"
+      }
+      ,
+    
+      "episodes-20060423-html": {
+        "name": "Untitled",
+        "date": "04/23/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060423.html"
+      }
+      ,
+    
+      "episodes-20060430-html": {
+        "name": "Untitled",
+        "date": "04/30/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060430.html"
+      }
+      ,
+    
+      "episodes-20060506-html": {
+        "name": "Untitled",
+        "date": "05/06/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060506.html"
+      }
+      ,
+    
+      "episodes-20060514-html": {
+        "name": "Untitled",
+        "date": "05/14/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060514.html"
+      }
+      ,
+    
+      "episodes-20060520-html": {
+        "name": "Untitled",
+        "date": "05/20/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060520.html"
+      }
+      ,
+    
+      "episodes-20060529-html": {
+        "name": "Untitled",
+        "date": "05/29/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060529.html"
+      }
+      ,
+    
+      "episodes-20060605-html": {
+        "name": "Untitled",
+        "date": "06/05/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060605.html"
+      }
+      ,
+    
+      "episodes-20060611-html": {
+        "name": "Untitled",
+        "date": "06/11/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060611.html"
+      }
+      ,
+    
+      "episodes-20060618-html": {
+        "name": "Untitled",
+        "date": "06/18/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060618.html"
+      }
+      ,
+    
+      "episodes-20060626-html": {
+        "name": "Untitled",
+        "date": "06/26/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060626.html"
+      }
+      ,
+    
+      "episodes-20060704-html": {
+        "name": "Untitled",
+        "date": "07/04/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060704.html"
+      }
+      ,
+    
+      "episodes-20060710-html": {
+        "name": "Untitled",
+        "date": "07/10/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060710.html"
+      }
+      ,
+    
+      "episodes-20060716-html": {
+        "name": "Untitled",
+        "date": "07/16/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060716.html"
+      }
+      ,
+    
+      "episodes-20060723-html": {
+        "name": "Untitled",
+        "date": "07/23/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060723.html"
+      }
+      ,
+    
+      "episodes-20060731-html": {
+        "name": "Untitled",
+        "date": "07/31/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060731.html"
+      }
+      ,
+    
+      "episodes-20060807-html": {
+        "name": "Untitled",
+        "date": "08/07/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060807.html"
+      }
+      ,
+    
+      "episodes-20060814-html": {
+        "name": "Untitled",
+        "date": "08/14/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060814.html"
+      }
+      ,
+    
+      "episodes-20060821-html": {
+        "name": "Untitled",
+        "date": "08/21/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060821.html"
+      }
+      ,
+    
+      "episodes-20060828-html": {
+        "name": "Untitled",
+        "date": "08/28/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060828.html"
+      }
+      ,
+    
+      "episodes-20060904-html": {
+        "name": "Untitled",
+        "date": "09/04/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060904.html"
+      }
+      ,
+    
+      "episodes-20060919-html": {
+        "name": "Untitled",
+        "date": "09/19/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20060919.html"
+      }
+      ,
+    
+      "episodes-20061002-html": {
+        "name": "Untitled",
+        "date": "10/02/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061002.html"
+      }
+      ,
+    
+      "episodes-20061009-html": {
+        "name": "Untitled",
+        "date": "10/09/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061009.html"
+      }
+      ,
+    
+      "episodes-20061016-html": {
+        "name": "Untitled",
+        "date": "10/16/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061016.html"
+      }
+      ,
+    
+      "episodes-20061024-html": {
+        "name": "Untitled",
+        "date": "10/24/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061024.html"
+      }
+      ,
+    
+      "episodes-20061029-html": {
+        "name": "Untitled",
+        "date": "10/29/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061029.html"
+      }
+      ,
+    
+      "episodes-20061105-html": {
+        "name": "Untitled",
+        "date": "11/05/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061105.html"
+      }
+      ,
+    
+      "episodes-20061112-html": {
+        "name": "Untitled",
+        "date": "11/12/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061112.html"
+      }
+      ,
+    
+      "episodes-20061124-html": {
+        "name": "Untitled",
+        "date": "11/24/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061124.html"
+      }
+      ,
+    
+      "episodes-20061126-html": {
+        "name": "Untitled",
+        "date": "11/26/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061126.html"
+      }
+      ,
+    
+      "episodes-20061208-html": {
+        "name": "Untitled",
+        "date": "12/08/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061208.html"
+      }
+      ,
+    
+      "episodes-20061213-html": {
+        "name": "Untitled",
+        "date": "12/13/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061213.html"
+      }
+      ,
+    
+      "episodes-20061217-html": {
+        "name": "Untitled",
+        "date": "12/17/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061217.html"
+      }
+      ,
+    
+      "episodes-20061228-html": {
+        "name": "Untitled",
+        "date": "12/28/06",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20061228.html"
+      }
+      ,
+    
+      "episodes-20070106-html": {
+        "name": "Untitled",
+        "date": "01/06/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070106.html"
+      }
+      ,
+    
+      "episodes-20070109-html": {
+        "name": "Untitled",
+        "date": "01/09/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070109.html"
+      }
+      ,
+    
+      "episodes-20070116-html": {
+        "name": "Untitled",
+        "date": "01/16/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070116.html"
+      }
+      ,
+    
+      "episodes-20070121-html": {
+        "name": "Untitled",
+        "date": "01/21/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070121.html"
+      }
+      ,
+    
+      "episodes-20070131-html": {
+        "name": "Untitled",
+        "date": "01/31/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070131.html"
+      }
+      ,
+    
+      "episodes-20070205-html": {
+        "name": "Untitled",
+        "date": "02/05/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070205.html"
+      }
+      ,
+    
+      "episodes-20070212-html": {
+        "name": "Untitled",
+        "date": "02/12/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070212.html"
+      }
+      ,
+    
+      "episodes-20070221-html": {
+        "name": "Untitled",
+        "date": "02/21/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070221.html"
+      }
+      ,
+    
+      "episodes-20070228-html": {
+        "name": "Untitled",
+        "date": "02/28/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070228.html"
+      }
+      ,
+    
+      "episodes-20070306-html": {
+        "name": "Untitled",
+        "date": "03/06/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070306.html"
+      }
+      ,
+    
+      "episodes-20070315-html": {
+        "name": "Untitled",
+        "date": "03/15/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070315.html"
+      }
+      ,
+    
+      "episodes-20070323-html": {
+        "name": "Untitled",
+        "date": "03/23/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070323.html"
+      }
+      ,
+    
+      "episodes-20070330-html": {
+        "name": "Untitled",
+        "date": "03/30/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070330.html"
+      }
+      ,
+    
+      "episodes-20070411-html": {
+        "name": "Untitled",
+        "date": "04/11/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070411.html"
+      }
+      ,
+    
+      "episodes-20070417-html": {
+        "name": "Untitled",
+        "date": "04/17/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070417.html"
+      }
+      ,
+    
+      "episodes-20070423-html": {
+        "name": "Untitled",
+        "date": "04/23/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070423.html"
+      }
+      ,
+    
+      "episodes-20070503-html": {
+        "name": "Untitled",
+        "date": "05/03/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070503.html"
+      }
+      ,
+    
+      "episodes-20070510-html": {
+        "name": "Untitled",
+        "date": "05/10/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070510.html"
+      }
+      ,
+    
+      "episodes-20070513-html": {
+        "name": "Untitled",
+        "date": "05/13/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070513.html"
+      }
+      ,
+    
+      "episodes-20070525-html": {
+        "name": "Untitled",
+        "date": "05/25/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070525.html"
+      }
+      ,
+    
+      "episodes-20070608-html": {
+        "name": "Untitled",
+        "date": "06/08/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070608.html"
+      }
+      ,
+    
+      "episodes-20070612-html": {
+        "name": "Untitled",
+        "date": "06/12/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070612.html"
+      }
+      ,
+    
+      "episodes-20070619-html": {
+        "name": "Untitled",
+        "date": "06/19/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070619.html"
+      }
+      ,
+    
+      "episodes-20070708-html": {
+        "name": "Untitled",
+        "date": "07/08/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070708.html"
+      }
+      ,
+    
+      "episodes-20070715-html": {
+        "name": "Untitled",
+        "date": "07/15/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070715.html"
+      }
+      ,
+    
+      "episodes-20070729-html": {
+        "name": "Untitled",
+        "date": "07/29/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070729.html"
+      }
+      ,
+    
+      "episodes-20070809-html": {
+        "name": "Untitled",
+        "date": "08/09/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070809.html"
+      }
+      ,
+    
+      "episodes-20070826-html": {
+        "name": "Untitled",
+        "date": "08/26/07",
+        "tags": "",
+        "content": "",
+        "url": "/episodes/20070826.html"
+      }
+      
+    
+  };
+</script>
+<script src="/js/lunr.js"></script>
+<script src="/js/search.js"></script>
+				</section>
+
+			<!-- Footer -->
+<footer id="footer">
+  <ul class="icons">
+    <li><a href="https://github.com/zmbc" class="icon fa-github"><span class="label">Github</span></a></li>
+  </ul>
+  <ul class="copyright">
+    <li>&copy; Zeb Burke-Conte. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+  </ul>
+</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="/js/jquery.min.js"></script>
+		<script src="/js/jquery.dropotron.min.js"></script>
+		<script src="/js/jquery.scrollgress.min.js"></script>
+		<script src="/js/skel.min.js"></script>
+		<script src="/js/util.js"></script>
+		<!--[if lte IE 8]><script src="/js/ie/respond.min.js"></script><![endif]-->
+		<script src="/js/main.js"></script>
+
+	</body>
+</html>

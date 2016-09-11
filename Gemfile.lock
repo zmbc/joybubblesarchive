@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/octopress/hooks.git
+  revision: 9ec9efcbe8e2aa4d79d2a35543a29b51f3e6feb2
+  specs:
+    octopress-hooks (2.6.1)
+      jekyll (>= 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -25,6 +32,8 @@ GEM
       rb-inotify (>= 0.9.7)
     mercenary (0.3.6)
     minima (1.0.1)
+    octopress-paginate (1.1.2)
+      octopress-hooks
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     rb-fsevent (0.9.7)
@@ -40,6 +49,8 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   minima
+  octopress-hooks!
+  octopress-paginate
 
 RUBY VERSION
    ruby 2.0.0p481
