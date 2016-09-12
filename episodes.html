@@ -24,7 +24,7 @@ paginate:
 {% include search.html %}
 {% for episode in paginator.episodes %}
   <div class="box">
-    <a href='{{episode.url}}'><h3 style="color:inherit">{{episode.name | default: 'Untitled'}}</h3></a>
+    <a href='{{episode.url | remove: '.html' }}'><h3 style="color:inherit">{{episode.name | default: 'Untitled'}}</h3></a>
     <p style="margin-bottom:0">{{episode.description | default: 'No description'}}</p>
     <p>{{episode.date | date:"%m/%d/%y"}}</p>
   </div>
