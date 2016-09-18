@@ -1,15 +1,19 @@
 ---
 layout: default
 ---
-<h2 class="post_title">{{page.title}}</h2>
-<ul>
-  {% for episode in site.episodes %}
-  {% for tag in episode.tags %}
-  {% if tag == page.tag %}
-  <li class="archive_list">
-    <a class="archive_list_article_link" href='{{episode.url}}'>{{episode.date | date:"%m/%d/%y"}}</a>
-  </li>
-  {% endif %}
-  {% endfor %}
-  {% endfor %}
-</ul>
+<header>
+  <h2 class="post_title">{{page.title}}</h2>
+</header>
+<div class="box">
+  <ul>
+    {% for episode in site.episodes %}
+    {% for tag in episode.tags %}
+    {% if tag == page.tag %}
+    <li class="archive_list">
+      <a class="archive_list_article_link" href='{{episode.url}}'>{{episode.name | default: 'Untitled'}} - {{episode.date | date:"%m/%d/%y"}}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+  </ul>
+</div>

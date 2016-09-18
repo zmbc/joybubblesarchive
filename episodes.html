@@ -9,7 +9,10 @@ paginate:
 ---
 <header style="margin-bottom:0.5em">
   <h2>{{page.title}}</h2>
-  <p>{{paginator.page | minus: 1 | times:paginator.per_page}} to {{paginator.page | times:paginator.per_page}} of {{paginator.total_episodes}} <br style="display:block">
+  <p style="line-height:0.7em">
+    <span style="font-size:0.7em">Interested in partial/incompletely recorded episodes? Click <a href="/tag/fragment">here</a></span>.
+    <br style="display:block">
+    {{paginator.page | minus: 1 | times:paginator.per_page}} to {{paginator.page | times:paginator.per_page}} of {{paginator.total_episodes}} <br style="display:block">
     {% if paginator.previous_page_path %}
     <a href="{{paginator.previous_page_path}}">Previous Page</a>
     {% endif %}
@@ -26,7 +29,15 @@ paginate:
   <div class="box">
     <a href='{{episode.url | remove: '.html' }}'><h3 style="color:inherit">{{episode.name | default: 'Untitled'}}</h3></a>
     <p style="margin-bottom:0">{{episode.description | default: 'No description'}}</p>
-    <p>{{episode.date | date:"%m/%d/%y"}}</p>
+    <p style="margin-bottom:0">{{episode.date | date:"%m/%d/%y"}}</p>
+    {% if episode.tags != empty %}
+    <div class="episode-tags">
+      Tagged:
+      {% for tag in episode.tags %}
+        <a href='/tag/{{tag}}'>{{tag}}</a>{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    </div>
+    {% endif %}
   </div>
 {% endfor %}
 <p style="text-align:center">
