@@ -2,7 +2,7 @@
 layout: default
 ---
 <header>
-  <h2>{{page.name | default: 'Untitled'}} - {{page.date | date:"%m/%d/%y"}}</h2>
+  <h2>{{page.name | default: 'Untitled'}} - {{page.date | date:"%m/%d/%Y"}}</h2>
 </header>
 <div class="box">
   {% include player.html filename=page.title %}

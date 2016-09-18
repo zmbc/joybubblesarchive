@@ -10,7 +10,7 @@ layout: default
     {% for tag in episode.tags %}
     {% if tag == page.tag %}
     <li class="archive_list">
-      <a class="archive_list_article_link" href='{{episode.url}}'>{{episode.name | default: 'Untitled'}} - {{episode.date | date:"%m/%d/%y"}}</a>
+      <a class="archive_list_article_link" href='{{episode.url}}'>{{episode.name | default: 'Untitled'}} - {{episode.date | date:"%m/%d/%Y"}}</a>
     </li>
     {% endif %}
     {% endfor %}

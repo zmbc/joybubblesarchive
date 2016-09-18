@@ -10,7 +10,7 @@ layout: default
     {% for episode in site.episodes %}
       "{{ episode.url | slugify }}": {
         "name": "{{ episode.name | default: 'Untitled' | xml_escape }}",
-        "date": "{{ episode.date | date:"%m/%d/%y" | xml_escape }}",
+        "date": "{{ episode.date | date:"%m/%d/%Y" | xml_escape }}",
         "tags": "{{ episode.tags | join: ', ' | xml_escape }}",
         "content": {{ episode.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ episode.url | xml_escape }}"
