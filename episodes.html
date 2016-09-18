@@ -28,8 +28,8 @@ paginate:
 {% for episode in paginator.episodes %}
   <div class="box">
     <a href='{{episode.url | remove: '.html' }}'><h3 style="color:inherit">{{episode.name | default: 'Untitled'}}</h3></a>
-    <p style="margin-bottom:0">{{episode.description | default: 'No description'}}</p>
-    <p style="margin-bottom:0">{{episode.date | date:"%m/%d/%y"}}</p>
+    <p style="margin-bottom:1em">{{episode.description | strip_html | truncatewords: 50 | default: 'No description'}}</p>
+    <p class="no-margin-bottom">{{episode.date | date:"%m/%d/%y"}}</p>
     {% if episode.tags != empty %}
     <div class="episode-tags">
       Tagged:
