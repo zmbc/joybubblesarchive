@@ -24,7 +24,7 @@ module Jekyll
             tags.concat(episode.data["tags"])
           end
         end
-        tags.each do |tag|
+        tags.uniq.each do |tag|
           write_tag_index(site, File.join(dir, tag), tag)
         end
       end
