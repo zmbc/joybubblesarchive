@@ -14,11 +14,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Joybubbles Archive
-email: your-email@domain.com
+email: zmbc@uw.edu
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Listen to Joybubbles' "show" Stories and Stuff streaming online,
+  in a searchable, categorized index of episodes.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://joybubblesarchive.com" # the base hostname & protocol for your site
 github_username:  zmbc

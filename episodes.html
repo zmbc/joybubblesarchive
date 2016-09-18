@@ -9,7 +9,7 @@ paginate:
 ---
 <header style="margin-bottom:0.5em">
   <h2>{{page.title}}</h2>
-  <p style="line-height:0.7em">
+  <p>
     <span style="font-size:0.7em">Interested in partial/incompletely recorded episodes? Click <a href="/tag/fragment">here</a></span>.
     <br style="display:block">
     {{paginator.page | minus: 1 | times:paginator.per_page}} to {{paginator.page | times:paginator.per_page}} of {{paginator.total_episodes}} <br style="display:block">
