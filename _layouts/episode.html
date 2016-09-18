@@ -5,7 +5,17 @@ layout: default
   <h2>{{page.name | default: 'Untitled'}} - {{page.date | date:"%m/%d/%y"}}</h2>
 </header>
 <div class="box">
+  {% include player.html filename=page.title %}
+
   <p>{{page.description | default: "Sorry, we don't have a description for this episode yet. (Get in touch if you want to help!)"}}</p>
   <p><a href="/audio/{{page.title}}.mp3" target="_blank">Download this episode for offline listening</a></p>
-  {% include player.html filename=page.title %}
+
+  {% if page.tags != empty %}
+  <p class="episode-tags">
+    Tagged:
+    {% for tag in page.tags %}
+      <a href='/tag/{{tag}}'>{{tag}}</a>{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  </p>
+  {% endif %}
 </div>
