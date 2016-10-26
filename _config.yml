@@ -20,7 +20,8 @@ description: > # this means to ignore newlines until "baseurl:"
   in a searchable, categorized index of episodes.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://joybubblesarchive.com" # the base hostname & protocol for your site
-github_username:  zmbc
+github_username: zmbc
+google_analytics: UA-86421501-1
 
 # Build settings
 markdown: kramdown
