@@ -9,8 +9,8 @@
         var item = store[results[i].ref];
         appendString += '<div class="box"><a href="' + item.url.replace('.html', '') + '"><h3 style="color:inherit">' + item.name + '</h3></a>';
         appendString += '<p style="margin-bottom:0">' + item.date + '</p>';
-        if (item.content.length > 0) {
-          appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        if (item.description.length > 0) {
+          appendString += '<p>' + item.description.substring(0, 150) + '...</p></li>';
         } else {
           appendString += '<p>No description.</p></div>';
         }
@@ -46,7 +46,7 @@
       this.field('id');
       this.field('name', { boost: 10 });
       this.field('tags');
-      this.field('content');
+      this.field('description');
     });
 
     for (var key in window.store) { // Add the data to lunr
@@ -54,7 +54,7 @@
         'id': key,
         'name': window.store[key].name,
         'tags': window.store[key].tags,
-        'content': window.store[key].content
+        'description': window.store[key].description
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search

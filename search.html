@@ -12,7 +12,7 @@ layout: default
         "name": "{{ episode.name | default: 'Untitled' | xml_escape }}",
         "date": "{{ episode.date | date:"%m/%d/%Y" | xml_escape }}",
         "tags": "{{ episode.tags | join: ', ' | xml_escape }}",
-        "content": {{ episode.content | strip_html | strip_newlines | jsonify }},
+        "description": {{ episode.description | strip_html | strip_newlines | jsonify }},
         "url": "{{ episode.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
