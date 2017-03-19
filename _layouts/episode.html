@@ -7,7 +7,7 @@ layout: default
 <div class="box">
   {% include player.html filename=page.title %}
 
-  <p>{{page.description | default: "Sorry, we don't have a description for this episode yet. (Get in touch if you want to help!)"}}</p>
+  <p>{{page.description | default: "Sorry, we don't have a description for this episode yet. (Get in touch if you want to contribute one!)"}}</p>
   <p><a href="/audio/{{page.title}}.mp3" target="_blank">Download this episode for offline listening</a></p>
 
   {% if page.tags != empty %}
