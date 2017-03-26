@@ -2,13 +2,13 @@
 layout: default
 ---
 <header>
-  <h2>{{page.name | default: 'Untitled'}} - {{page.date | date:"%m/%d/%Y"}}</h2>
+  <h2>{{page.title | default: 'Untitled'}} - {{page.date | date:"%m/%d/%Y"}}</h2>
 </header>
 <div class="box">
-  {% include player.html filename=page.title %}
+  {% include player.html date=page.date %}
 
   <p>{{page.description | default: "Sorry, we don't have a description for this episode yet. (Get in touch if you want to contribute one!)"}}</p>
-  <p><a href="/audio/{{page.title}}.mp3" target="_blank">Download this episode for offline listening</a></p>
+  <p><a href="/audio/{{page.date | date:'%Y%m%d'}}.mp3" target="_blank">Download this episode for offline listening</a></p>
 
   {% if page.tags != empty %}
   <p class="episode-tags">

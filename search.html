@@ -9,8 +9,8 @@ layout: default
   window.store = {
     {% for episode in site.episodes %}
       "{{ episode.url | slugify }}": {
-        "name": "{{ episode.name | default: 'Untitled' | xml_escape }}",
-        "date": "{{ episode.date | date:"%m/%d/%Y" | xml_escape }}",
+        "title": "{{ episode.title | default: 'Untitled' | xml_escape }}",
+        "date": "{{ episode.date | date:'%m/%d/%Y' | xml_escape }}",
         "tags": "{{ episode.tags | join: ', ' | xml_escape }}",
         "description": {{ episode.description | strip_html | strip_newlines | jsonify }},
         "url": "{{ episode.url | xml_escape }}"
